@@ -1,0 +1,259 @@
+Problem Statement
+A large multi-specialty hospital manages thousands of patients across departments, wards, doctors,
+and diagnostic labs.
+ 
+Current issues:
+• duplicate patient records
+• manual billing and wrong charge calculations
+• no appointment scheduling system
+• delayed lab report generation
+• no doctor-wise patient tracking
+• prescription errors and missing records
+• insurance claim failures due to missing data
+The hospital wants a
+Python-based Hospital Patient Management &amp; Billing System
+The system must automate patient operations, manage billing, track doctors, generate lab reports,
+and produce management reports.
+ 
+Technical Challenges
+• Managing large patient and doctor datasets
+• Multi-rule billing calculations (OPD, IPD, surgery, diagnostics)
+• Duplicate record detection across departments
+• Insurance claim validation and calculation
+• Ward occupancy and bed allocation logic
+• Batch report generation for administration
+ 
+Requirements
+Design classes:
+Patient
+Doctor
+BillingEngine
+AppointmentScheduler
+DiagnosticLab
+HospitalReportSystem
+ 
+• Read patient and doctor data from CSV / JSON.
+Validate:
+• duplicate patient IDs
+• invalid bill amounts
+ 
+• missing doctor assignment
+• future admission dates
+Billing Formula:
+TotalBill = ConsultationFee + RoomCharge + DiagnosticFee + Surgery - InsuranceCoverage -
+Discount
+Detect billing anomalies:
+• negative bill amount
+• unusually high diagnostic fee
+• duplicate insurance claim
+• discharged but full room charge
+ 
+ 
+Create ranking logic using:
+• doctor rating
+• patient recovery score
+• appointment punctuality %
+• diagnosis accuracy score
+• Sort top-rated doctors.
+• Use recursion for department hierarchy traversal.
+Use CLI:
+python hospital.py --month march --department cardiology
+ 
+Use custom exceptions:
+BillingDataError
+DuplicatePatientError
+InsuranceCalculationError
+ 
+Generate reports:
+• Top 10 rated doctors
+• Revenue breakdown by department
+• Patients eligible for discharge
+• Billing anomalies report
+• Critical patient risk list
+ 
+Expected Outcome
+A robust hospital management platform demonstrating:
+• advanced Python
+• dictionaries
+• sorting
+• recursion
+• file handling
+• OOP
+• exception handling
+• healthcare automation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Practice question 2:
+ 
+Problem Statement
+A busy multi-specialty hospital currently manages patients, doctors, appointments, admissions,
+billing, pharmacy, and medical records manually using paper files and disconnected spreadsheets.
+
+Because of this, the hospital faces:
+incorrect patient records
+delayed appointment handling
+duplicate patient entries
+unpaid bill tracking failures
+poor medicine inventory management
+manual prescription handling
+no automated appointment scheduling
+difficult emergency admission management
+no centralized doctor administration system
+The hospital wants to build a
+Console-Based Python Hospital Management System
+to automate end-to-end hospital operations. Students must create a menu-driven application
+using Python concepts.
+
+Objective
+Build one console application:
+python hospital.py
+That provides:
+Admin Login
+Patient Registration
+Doctor Management
+Appointment Booking
+Patient Admission
+Billing System
+Pharmacy Management
+Discharge System
+Emergency Handling
+Reports Dashboard
+Exit
+Functional Modules
+Module 1: Authentication System
+Tasks
+Admin login
+Patient signup/login
+Password validation
+3 failed attempts lock account
+Save users in file
+Module 2: Doctor Management (Admin)
+Tasks
+Add new doctor
+Update specialization
+Update consultation fees
+Delete doctor
+Search doctor
+Department-wise listing
+Doctor Fields
+Doctor ID
+Name
+Specialization
+Department
+Experience
+Consultation Fee
+Availability Status
+Module 3: Patient Management
+Tasks
+Register patient
+Update address/contact
+View profile
+Medical history
+Previous appointments
+Module 4: Appointment System
+Tasks
+Book appointment
+Check doctor availability
+Generate Appointment ID
+Save appointment details
+Print appointment slip
+Appointment ID Example
+APT1001
+APT1002
+Module 5: Patient Admission System
+Tasks
+When a patient gets admitted:
+Check room availability
+Assign room/ward
+Generate Admission ID
+Save admission details
+Print admission slip
+Admission ID Example
+ADM1001
+ADM1002
+Module 6: Billing System
+Tasks
+Generate hospital bill
+Calculate room charges
+Add doctor consultation fees
+Add medicine charges
+Store payment history
+Bill Formula
+Total Bill =
+Room Charges +
+Doctor Fees +
+Medicine Charges
+Module 7: Pharmacy Management
+Tasks
+Add medicines
+Update medicine stock
+Search medicine
+Sell medicines
+Generate medicine bill
+Notify low stock
+Medicine Fields
+Medicine ID
+Medicine Name
+Company
+Expiry Date
+Price
+Stock Available
+Module 8: Discharge System
+Tasks
+Discharge patient
+Generate final bill
+Update room availability
+Save discharge summary
+Print discharge report
+Module 9: Emergency Handling System
+Tasks
+Emergency patient registration
+Assign emergency doctor
+Track emergency ward availability
+Priority-based handling
+Generate emergency case report
+Module 10: Reports Dashboard (Admin)
+Generate Reports
+Total Patients
+Total Appointments
+Admitted Patients
+Total Revenue
+Most Consulted Doctor
+Available Rooms
+Pharmacy Sales
+Emergency Cases
+Top Active Doctor
+ 
+ 
