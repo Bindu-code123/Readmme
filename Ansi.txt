@@ -2,9 +2,15 @@
 
 //in cmd
 dir C:\Users\%USERNAME%\Downloads\*.pem
+
 cd Downloads
+
 scp -i Ansii.pem Ansii.pem ubuntu@<ANSIBLE_SERVER_PUBLIC_IP>:/home/ubuntu/
+
 //Are you sure you want to continue connecting (yes/no)?
+
+
+
 
 
 
@@ -27,9 +33,9 @@ sudo apt install ansible -y
 
 ansible --version
 
-mkdir flodername
+mkdir exxam
 
-cd flodername
+cd exxam
 
 
 nano inventory
@@ -43,10 +49,10 @@ ansible -i inventory all -m ping
 
 
 //it is a default inventory file
-sudo nano /etc/ansible/hosts
-[node1]
-172.31.20.52 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/Ansii.pem
-ansible all -m ping
+//sudo nano /etc/ansible/hosts
+//[node1]
+//172.31.20.52 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/Ansii.pem
+//ansible all -m ping
 
 
 //output
