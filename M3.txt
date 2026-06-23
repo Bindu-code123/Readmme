@@ -1,0 +1,146 @@
+You are a friendly Indian home food blogger.
+
+Write blog posts in a warm, simple, and engaging tone. Focus on quick and easy Indian recipes suitable for working professionals and beginners.
+
+Use:
+- Simple English (easy to understand)
+- Short paragraphs
+- Step-by-step cooking instructions
+- Helpful tips and variations
+- A friendly, homely feel (like explaining to a friend)
+
+Keep the blog length around 200–300 words.
+Make the reader feel confident to cook the recipe quickly.
+
+
+
+
+Write a 250-word blog post about a simple Indian breakfast recipe: "Quick Poha Recipe for Busy Mornings".
+
+Follow a warm and simple tone. Include:
+- Short introduction
+- Ingredients
+- Step-by-step preparation
+- 2–3 helpful tips
+
+Make it easy for beginners and working professionals.
+
+
+
+
+
+
+Convert the above blog post into a clean and well-structured Markdown format.
+
+Use:
+- Heading for title
+- Bullet points for ingredients
+- Numbered steps for instructions
+- Highlight section for tips
+
+Make it easy to copy and publish.
+
+
+
+
+Revise the blog post to make it shorter (around 150 words) and more casual in tone.
+
+Make it feel like a quick tip shared between friends.
+
+
+
+
+The revised version is shorter and uses a more casual, friendly tone compared to the original detailed blog post.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!pip install anthropic
+
+
+def get_weather(city):
+    return f"It is 30°C and sunny in {city}"
+    
+    
+print(get_weather("Jaipur"))
+
+
+print(get_weather("Bangalore"))
+
+
+
+def ask_claude(user_question):
+    # Very simple logic to simulate Claude thinking
+    if "weather" in user_question.lower() or "umbrella" in user_question.lower():
+        
+        # Extract city (simple assumption: last word is city)
+        city = user_question.split()[-1].replace("?", "")
+        
+        # Call our tool
+        weather = get_weather(city)
+        
+        return f"{weather}. You can plan accordingly!"
+    
+    else:
+        return "This question is not related to weather."
+        
+
+
+print(ask_claude("Should I carry an umbrella in Jaipur today?"))
+
+
+print(ask_claude("What is the capital of Rajasthan?"))
+
+
+
+
+
+
+
+
+
+
+
+✅ ✅ Case Study 1 – Home Food Blog (Short Note)
+👉 In this case study, a project is created in Claude AI to generate food blog content.
+
+Custom instructions are set to define tone and style (simple, friendly, Indian recipes)
+Claude is used to generate a blog post (e.g., Poha recipe)
+The blog is formatted properly using artifacts
+The content is revised to make it shorter or more casual
+
+✅ Outcome:
+Claude works like a blog-writing assistant that creates consistent and reusable content.
+
+✅ ✅ Case Study 2 – Weather Assistant (Short Note)
+👉 In this case study, a simple AI system is built using Python without an API key.
+
+A mock function get_weather() returns fake weather data
+A logic function checks if the question is weather-related
+If yes → calls the weather function
+If no → ignores the tool
+
+✅ Outcome:
+The system shows basic AI decision-making, where tools are used only when needed.
+
+✅ ✅ Final One-Line Difference
+👉
+Case Study 1 focuses on content generation using AI, while Case Study 2 focuses on tool usage and decision-making logic.
+
