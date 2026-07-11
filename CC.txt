@@ -105,6 +105,16 @@ spec:
         - containerPort: 80
 
 
+
+
+After aws configure only we use these all aws cli commands
+aws ec2 describe-key-pairs
+//to know key pairs
+
+aws s3 ls
+//to know buckets
+
+
 aws ec2 run-instances \
 --image-id ami-042b4708b1d05f512 \
 --instance-type t3.micro \
@@ -112,3 +122,25 @@ aws ec2 run-instances \
 --count 1 \
 --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=DevOps-Server}]"    
 //To create an ec2 instance using command
+
+
+aws ec2 describe-instances
+//To know instances
+
+aws ec2 terminate-instances --instance-ids i-0123456789abcdef0
+//TO terminate instance
+
+aws ec2 stop-instances --instance-ids <INSTANCE_ID>
+//to stop instances
+
+
+aws s3 mb s3://bucket-name
+ or
+aws s3 mb s3://bindu-devops-2026-001 --region eu-north-1
+//to make bucket
+
+aws s3 rb s3://bucket-name
+//to remove bucket
+
+
+
