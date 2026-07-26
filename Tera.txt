@@ -138,12 +138,8 @@ terraform plan
 
 terraform apply --auto-approve
 
-aws_instance.server[0]
-aws_instance.server[1]
-aws_instance.server[2]
+//If you have many instances to delete specific instance then we use name to delete it
 
-To destroy only the second instance:
-
-terraform destroy -target=aws_instance.server[1]
+terraform destroy -target=aws_instance.tomcat_server
 
 
