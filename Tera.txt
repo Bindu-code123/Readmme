@@ -35,6 +35,8 @@ mkdir proj
 
 cd proj
 
+//It tells Terraform which provider (such as AWS, Azure, or GCP) to use and in which region to create the resources.
+//In this example, provider "aws" selects AWS, and region = var.region specifies the AWS region using a variable.
 
 vi provider.tf
 
@@ -135,5 +137,13 @@ terraform validate
 terraform plan
 
 terraform apply --auto-approve
+
+aws_instance.server[0]
+aws_instance.server[1]
+aws_instance.server[2]
+
+To destroy only the second instance:
+
+terraform destroy -target=aws_instance.server[1]
 
 
